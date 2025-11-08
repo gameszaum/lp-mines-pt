@@ -18,7 +18,35 @@ const BUTTON_TIMINGS = {
     instagram: { show: 502, hide: 522 }      // 8:22 até 8:42 (20 segundos)
 };
 
-const VIDEO_DURATION = 17 * 60; // 17 minutos em segundos
+let time = 0;
+
+setInterval(() => {
+    time++;
+
+    if (time === BUTTON_TIMINGS.vembet.show) {
+        showButton(vembetButton, 'VemBet');
+    } else if (time === BUTTON_TIMINGS.vembet.hide) {
+        hideButton(vembetButton, 'VemBet');
+    }
+
+    if (time === BUTTON_TIMINGS.robot.show) {
+        showButton(ctaButtonLocked, 'Robô');
+    } else if (time === BUTTON_TIMINGS.robot.hide) {
+        hideButton(ctaButtonLocked, 'Robô');
+        unlockButton();
+    }
+
+    if (time === BUTTON_TIMINGS.instagram.show) {
+        showButton(instagramButton, 'Instagram');
+    } else if (time === BUTTON_TIMINGS.instagram.hide) {
+        hideButton(instagramButton, 'Instagram');
+    }
+    if (time >= 523) {
+        showAllButtonsPermanently();
+    }
+}, 1000);
+
+const VIDEO_DURATION = 8 * 60; // 8 minutos em segundos
 
 // Função para mostrar todos os botões permanentemente
 function showAllButtonsPermanently() {
