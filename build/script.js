@@ -20,29 +20,33 @@ const BUTTON_TIMINGS = {
 
 let time = 0;
 
-setInterval(() => {
-    time++;
+setTimeout(() => {
+    showAllButtonsPermanently();
+}, 3000);
 
-    if (time === BUTTON_TIMINGS.vembet.show) {
-        showButton(vembetButton, 'VemBet');
-    }
+// setInterval(() => {
+//     time++;
 
-    if (time === BUTTON_TIMINGS.robot.show) {
-        showButton(ctaButtonLocked, 'Robô');
-    } else if (time === BUTTON_TIMINGS.robot.hide) {
-        hideButton(ctaButtonLocked, 'Robô');
-        unlockButton();
-    }
+//     if (time === BUTTON_TIMINGS.vembet.show) {
+//         showButton(vembetButton, 'VemBet');
+//     }
 
-    if (time === BUTTON_TIMINGS.instagram.show) {
-        showButton(instagramButton, 'Instagram');
-    } else if (time === BUTTON_TIMINGS.instagram.hide) {
-        hideButton(instagramButton, 'Instagram');
-    }
-    if (time >= 523) {
-        showAllButtonsPermanently();
-    }
-}, 1000);
+//     if (time === BUTTON_TIMINGS.robot.show) {
+//         showButton(ctaButtonLocked, 'Robô');
+//     } else if (time === BUTTON_TIMINGS.robot.hide) {
+//         hideButton(ctaButtonLocked, 'Robô');
+//         unlockButton();
+//     }
+
+//     if (time === BUTTON_TIMINGS.instagram.show) {
+//         showButton(instagramButton, 'Instagram');
+//     } else if (time === BUTTON_TIMINGS.instagram.hide) {
+//         hideButton(instagramButton, 'Instagram');
+//     }
+//     if (time >= 523) {
+//         showAllButtonsPermanently();
+//     }
+// }, 1000);
 
 const VIDEO_DURATION = 8 * 60; // 8 minutos em segundos
 
