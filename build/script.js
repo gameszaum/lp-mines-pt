@@ -22,6 +22,9 @@ let time = 0;
 
 setTimeout(() => {
     showAllButtonsPermanently();
+
+
+    unlockButton();
 }, 3000);
 
 // setInterval(() => {
