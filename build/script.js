@@ -14,7 +14,7 @@ let videoStarted = false;
 // Configuração de tempo dos botões (em segundos)
 const BUTTON_TIMINGS = {
     vembet: { show: 48, hide: 130 },         // 0:48 até 2:10
-    robot: { show: 132, hide: 170 },         // 2:12 até 2:40
+    robot: { show: 132, hide: 150 },         // 2:12 até 2:40
     instagram: { show: 502, hide: 522 }      // 8:22 até 8:42 (20 segundos)
 };
 
@@ -25,8 +25,6 @@ setInterval(() => {
 
     if (time === BUTTON_TIMINGS.vembet.show) {
         showButton(vembetButton, 'VemBet');
-    } else if (time === BUTTON_TIMINGS.vembet.hide) {
-        hideButton(vembetButton, 'VemBet');
     }
 
     if (time === BUTTON_TIMINGS.robot.show) {
